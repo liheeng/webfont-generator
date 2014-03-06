@@ -1,0 +1,15 @@
+{
+  "id": "example-icon",
+  "familyname": "Example Icon Font",
+  "copyright": "Company Inc.",
+  "charmap": [
+    {
+      "unicode": "&#xf000;",
+      "file": "./tag.svg"
+    },
+    {
+      "unicode": "&#xf001;",
+      "file": "./location.svg"
+    }
+  ]
+}
