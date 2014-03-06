@@ -1,5 +1,10 @@
 Generates web-fonts based on individual vector files
 
+License
+=======
+
+MIT
+
 Running instructions
 ====================
 
