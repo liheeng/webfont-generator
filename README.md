@@ -1,4 +1,6 @@
 Generates web-fonts based on individual vector files
+This is fork of https://github.com/moven/webfont-generator and add supports of eot font and png outputs.
+=======
 
 License
 =======
@@ -23,6 +25,8 @@ Config dir must contain at minimum the following properties:
   "id": "<basename for generated files>",
   "familyname": "<name of font>",
   "copyright": "<copyright details>",
+  "outputformats": ["svg","ttf","eot", "woff","png"],
+  "pngsize": [64, 128],
   "charmap": [
     {
       "unicode": "<unicode for characters, e.g. a, - or &#xf000>",
