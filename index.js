@@ -57,7 +57,7 @@ function convert2Png(inputDir, outputDir, config, done) {
         var name = charConfig.file.substring(charConfig.file.lastIndexOf('/') + 1, charConfig.file.lastIndexOf('.'));
         name = 'images/' + name + '_' + charConfig.unicode;
 
-        config.pngscales.map(function (ele) {
+        config.pngsize.map(function (ele) {
             var data = fs.readFileSync(file, 'utf-8');
             if (data) {
                 svg2png(data, {'width': ele, 'height': ele})
