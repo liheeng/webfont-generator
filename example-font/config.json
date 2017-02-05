@@ -2,6 +2,8 @@
   "id": "example-icon",
   "familyname": "Example Icon Font",
   "copyright": "Company Inc.",
+  "outputformats": ["svg","ttf","eot","woff"],
+  "pngscales": [64, 128],
   "charmap": [
     {
       "unicode": "&#xf000;",

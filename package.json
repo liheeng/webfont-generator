@@ -31,16 +31,18 @@
     "unicode"
   ],
   "dependencies": {
-    "ttf2woff": "~1.2.0",
-    "svg2ttf": "~1.1.2",
-    "svgo": "~0.4.4",
-    "xml2js": "~0.4.1",
+    "ttf2woff": ">1.2.0",
+    "ttf2eot":">=2.0.0",
+    "svg2ttf": ">1.1.2",
+    "svgo": ">0.4.4",
+    "xml2js": ">0.4.1",
     "async": "~0.2.9",
     "underscore": "~1.5.2",
-    "svgpath": "~1.0.2"
+    "svgpath": ">1.0.2",
+    "svg2png": "~4.1.1"
   },
   "devDependencies": {},
   "engines": {
-    "node": "=0.10.8"
+    "node": ">0.10.8"
   }
 }
