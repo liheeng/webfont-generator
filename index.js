@@ -55,14 +55,14 @@ function convert2Png(inputDir, outputDir, config, done) {
     var mapFunction = function (charConfig, done) {
         var file = path.resolve(inputDir, charConfig.file);
         var name = charConfig.file.substring(charConfig.file.lastIndexOf('/') + 1, charConfig.file.lastIndexOf('.'));
-        name += '_' + charConfig.unicode;
+        name = 'images/' + name + '_' + charConfig.unicode;
 
         config.pngscales.map(function (ele) {
             var data = fs.readFileSync(file, 'utf-8');
             if (data) {
                 svg2png(data, {'width': ele, 'height': ele})
                     .then(function (buf) {
-                        var outputFile = path.resolve(outputDir, 'images/' + name + '.' + ele + '.png');
+                        var outputFile = path.resolve(outputDir,  name + '.' + ele + '.png');
                         fs.writeFile(outputFile, new Buffer(buf), function (err) {
                             if (err) {
                                 return done(err);
@@ -81,14 +81,15 @@ function convert2Png(inputDir, outputDir, config, done) {
             return done(err);
         }
 
-        return done(null, null);
+        return done(null, path.resolve(outputDir, name));
     });
 }
 
 function needSave(config, format) {
-    return config.filter(function (v) {
+    var result = config.filter(function (v) {
         return v === format;
     });
+    return result && result.length > 0;
 }
 
 function generateFont(inputDir, outputDir, done) {
